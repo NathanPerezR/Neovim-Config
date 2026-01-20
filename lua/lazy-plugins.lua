@@ -24,7 +24,8 @@ require('lazy').setup({
   require 'plugins.autopairs',
   require 'plugins.neo-tree',
   require 'plugins.vimtex',
-  require 'plugins.roslyn'
+  require 'plugins.roslyn',
+  require 'plugins.org'
 --   require 'plugins.mini',
 }, {
   ui = {
