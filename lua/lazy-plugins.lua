@@ -25,7 +25,7 @@ require('lazy').setup({
   require 'plugins.neo-tree',
   require 'plugins.vimtex',
   require 'plugins.roslyn',
-  require 'plugins.org'
+  require 'plugins.obsidian'
 --   require 'plugins.mini',
 }, {
   ui = {
