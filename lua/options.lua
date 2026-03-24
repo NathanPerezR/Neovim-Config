@@ -61,9 +61,11 @@ vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 
 -- Line number stuff
-vim.expandtab = true
-vim.smartindent = true
-vim.tabstop = 2
-vim.shiftwidth = 2
+vim.opt.expandtab = true
+vim.opt.smartindent = false 
+vim.opt.autoindent = true
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
 
 vim.cmd([[ set colorcolumn=100 ]])
