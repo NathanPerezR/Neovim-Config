@@ -49,5 +49,3 @@ vim.opt.autoindent = true -- copies indent from prev line
 vim.opt.tabstop = 2 -- how many spaces tab generates
 vim.opt.softtabstop = 2 -- 
 vim.opt.shiftwidth = 2 -- how many tabs are done by << >> and ==
-
-vim.opt.laststatus = 2 -- enable status line always 

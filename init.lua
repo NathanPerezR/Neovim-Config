@@ -1,6 +1,6 @@
 if vim.fn.has("nvim-0.11") == 0 then
-    vim.notify("Gotta be on 0.11+", vim.log.levels.ERROR)
-    return
+  vim.notify("Gotta be on 0.11+", vim.log.levels.ERROR)
+  return
 end
 
 vim.g.have_nerd_font = true
@@ -11,12 +11,17 @@ vim.g.maplocalleader = ' '
 require 'options'
 require 'lazy-setup'
 require 'keymaps'
--- require 'statusline'
 
+
+require('lualine').setup()
 
 vim.diagnostic.config({
   virtual_lines = {
     current_line = true,
   },
 })
-vim.lsp.enable({ "ts_ls", "vue_ls" })
+
+-- see https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
+-- NOTE: installing things with mason will not work on Nix, if the lsp is on path, it will attach
+vim.lsp.enable({ "ts_ls", "vue_ls", "lua_ls"})
+
