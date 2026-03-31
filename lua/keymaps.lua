@@ -1,3 +1,4 @@
+-- keymaps ----------------------------------------------------------------------------------------------------------------
 -- [[ Basic Keymaps ]]
 --
 -- clear highlights on search when pressing <Esc> in normal mode
@@ -49,3 +50,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- Spell
 vim.keymap.set("n", "<Leader>Se", ":setlocal spell spelllang=en_us<CR>", { desc = "Enable spellcheck (English)" })
 vim.keymap.set("n", "<Leader>Sd", ":setlocal nospell<CR>", { desc = "Disable spellcheck" })
+
+--- lsp neovim ------------------------------------------------------------------------------------------------------------
+-- work flow:
+-- 1. add a file for each lsp in nvim/lsp (can copy configs from nvim-lspconfig)
+-- 2. call the below function
+
