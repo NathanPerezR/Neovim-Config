@@ -1,3 +1,7 @@
+vim.g.have_nerd_font = true
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
+
 -- Make line numbers default
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -22,8 +26,6 @@ vim.opt.signcolumn = 'yes' -- Keep signcolumn on by default
 
 vim.opt.updatetime = 250 -- Decrease update time
 
-vim.opt.timeoutlen = 300 -- Decrease mapped sequence wait time (Displays which-key popup sooner)
-
 -- Configure how new splits should be opened
 vim.opt.splitright = true
 vim.opt.splitbelow = true
@@ -37,11 +39,11 @@ vim.opt.listchars = { -- select the whitespace chars
   space = ' ' -- non trailing non leading spaces
 }
 
-vim.opt.inccommand = 'split' -- Preview substitutions live, as you type!
+vim.opt.inccommand = 'split' -- Preview substitutions live
 
 vim.opt.cursorline = true -- Show which line your cursor is on
 
-vim.opt.scrolloff = 10 -- Minimal number of screen lines to keep above and below the cursor.
+vim.opt.scrolloff = 15 -- Minimal number of screen lines to keep above and below the cursor.
 
 vim.opt.expandtab = true -- convert tab into spaces
 vim.opt.smartindent = true  -- smart indent for programming lang

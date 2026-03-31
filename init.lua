@@ -1,25 +1,14 @@
-if vim.fn.has("nvim-0.11") == 0 then
-  vim.notify("Gotta be on 0.11+", vim.log.levels.ERROR)
+if vim.fn.has("nvim-0.12") == 0 then
+  vim.notify("Gotta be on 0.12+", vim.log.levels.ERROR)
   return
 end
 
-vim.g.have_nerd_font = true
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
-
 -- load the following files in the ./lua folder
-require 'options'
-require 'lazy-setup'
-require 'keymaps'
+require 'options' -- nvim options
+require 'keymaps' -- non plugin key maps
+require 'lsp-global' -- global lsp config (rest are loaded from lsp folder)
 
-
-require('lualine').setup()
-
-vim.diagnostic.config({
-  virtual_lines = {
-    current_line = true,
-  },
-})
+-- NOTE: plugins are loaded with vim.pack (default package manager)
 
 -- see https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
 -- NOTE: installing things with mason will not work on Nix, if the lsp is on path, it will attach

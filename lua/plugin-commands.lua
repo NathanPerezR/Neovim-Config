@@ -1,0 +1,3 @@
+-- TODO: commands to clean packages that no longer have files, and upgrade command
+-- for now, just delete by running 
+-- :lua vim.pack.update(nil, { offline = true }) might be enough
