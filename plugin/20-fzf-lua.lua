@@ -15,6 +15,7 @@ vim.keymap.set('n', '<leader>sf', function() fzf.files() end, { desc = '[S]earch
 vim.keymap.set('n', '<leader>sb', function() fzf.buffers() end, { desc = '[S]earch [B]uffers' })
 vim.keymap.set('n', '<leader>sg', function() fzf.live_grep() end, { desc = '[S]earch by [G]rep' })
 vim.keymap.set('n', '<leader>sh', function() fzf.helptags() end, { desc = '[S]earch [H]elp' })
+vim.keymap.set('n', '<leader>sk', function() fzf.keymaps() end, { desc = '[S]earch [K]ey Binds' })
 
 -- TODO: go through LSP actions and see if there are more to do
 vim.keymap.set('n', '<leader>sll', function() fzf.helptags() end, { desc = '[S]earch [L]sp - [L]ive Workplace symbols' })
