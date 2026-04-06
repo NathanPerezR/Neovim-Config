@@ -12,5 +12,12 @@ require 'lsp-global' -- global lsp config (rest are loaded from lsp folder)
 
 -- see https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
 -- NOTE: installing things with mason will not work on Nix, if the lsp is on path, it will attach
-vim.lsp.enable({ "ts_ls", "vue_ls", "lua_ls"})
+
+vim.filetype.add({
+  extension = {
+    gd = "gdscript",
+  },
+})
+
+vim.lsp.enable({ "ts_ls", "vue_ls", "lua_ls", "gdscript"})
 
