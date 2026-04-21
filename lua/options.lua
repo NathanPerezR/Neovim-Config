@@ -46,8 +46,7 @@ vim.opt.cursorline = true -- Show which line your cursor is on
 vim.opt.scrolloff = 15 -- Minimal number of screen lines to keep above and below the cursor.
 
 vim.opt.expandtab = true -- convert tab into spaces
-vim.opt.smartindent = true  -- smart indent for programming lang
-vim.opt.autoindent = true -- copies indent from prev line
+vim.opt.autoindent = true -- copies inden from prev line
 vim.opt.tabstop = 2 -- how many spaces tab generates
 vim.opt.softtabstop = 2 -- 
 vim.opt.shiftwidth = 2 -- how many tabs are done by << >> and ==

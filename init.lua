@@ -19,5 +19,5 @@ vim.filetype.add({
   },
 })
 
-vim.lsp.enable({ "ts_ls", "vue_ls", "lua_ls", "gdscript"})
+vim.lsp.enable({ "ts_ls", "vue_ls", "lua_ls", "gdscript", "omnisharp"})
 
