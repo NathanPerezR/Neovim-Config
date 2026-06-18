@@ -27,3 +27,16 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- spell
 vim.keymap.set("n", "<Leader>Se", ":setlocal spell spelllang=en_us<CR>", { desc = "Enable spellcheck (English)" })
 vim.keymap.set("n", "<Leader>Sd", ":setlocal nospell<CR>", { desc = "Disable spellcheck" })
+
+-- zettelkasten timestamp
+
+local function zk_timestamp()
+  return os.date('%Y%m%d%H%M')
+end
+vim.keymap.set('n', '<leader>zn', function()
+  vim.api.nvim_put({ zk_timestamp() }, 'c', true, true)
+end, {
+  desc = 'Insert ZK Timestamp',
+})
+
+vim.api.nvim_set_keymap('i', 'jj', '<Esc>', {noremap = true, silent = true})
