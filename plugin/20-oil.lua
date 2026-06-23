@@ -18,3 +18,15 @@ require("oil").setup({
     case_insensitive = true,
   },
 })
+
+--  oil toggle
+
+local oil = require("oil")
+
+vim.keymap.set("n", "<leader>o", function()
+  if vim.bo.filetype == "oil" then
+    require("oil.actions").close.callback()
+  else
+    oil.open()
+  end
+end, { desc = "Toggle Oil" })
