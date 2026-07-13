@@ -19,5 +19,11 @@ vim.filetype.add({
   },
 })
 
-vim.lsp.enable({ "ts_ls", "vue_ls", "lua_ls", "gdscript", "omnisharp", "hls", "sourcekit"})
+vim.api.nvim_create_autocmd("FileType", {
+  callback = function()
+    pcall(vim.treesitter.start)
+  end,
+})
+
+vim.lsp.enable({ "ts_ls", "vue_ls", "lua_ls", "gdscript", "omnisharp", "hls", "sourcekit", "fsautocomplete"})
 
